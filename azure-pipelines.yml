@@ -11,5 +11,11 @@ pool:
   vmImage: 'windows-2019'
 
 steps:
+
 - task: ArchiveFiles@2
-  displayName: 'Archive MyAzureFunction'
+  inputs:
+    rootFolderOrFile: '$(Build.BinariesDirectory)'
+    includeRootFolder: true
+    archiveType: 'zip'
+    archiveFile: '$(Build.ArtifactStagingDirectory)/MyAzureFunctionArchiveFolder.zip'
+    replaceExistingArchive: true
