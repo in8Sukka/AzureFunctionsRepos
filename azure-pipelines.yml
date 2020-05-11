@@ -10,7 +10,7 @@ trigger:
 pool:
   vmImage: 'windows-2019'
 
-  steps:
-  - task: ArchiveFiles@2
-    displayName: 'Archive FunctionApp'
-  - task: PublishPipelineArtifact@0
+steps:
+- task: ArchiveFiles@2
+  displayName: 'Archive FunctionApp'
+- task: PublishPipelineArtifact@1
